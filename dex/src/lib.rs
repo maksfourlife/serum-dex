@@ -22,7 +22,7 @@ use solana_program::{account_info::AccountInfo, entrypoint::ProgramResult, pubke
 #[cfg(not(feature = "no-entrypoint"))]
 entrypoint!(process_instruction);
 #[cfg(feature = "program")]
-fn process_instruction(
+pub fn process_instruction(
     program_id: &Pubkey,
     accounts: &[AccountInfo],
     instruction_data: &[u8],
